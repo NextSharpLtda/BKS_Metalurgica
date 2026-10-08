@@ -1,0 +1,1181 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BKS Metalúrgica - Aço Inox de Alto Padrão</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#071E33',
+              darker: '#041322',
+              navy: '#0A3158',
+              blue: '#144F80',
+              orange: '#FF8500',
+              orangeHover: '#FF9924',
+              metallic: '#B8C0C8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #041322;
+      color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    
+    .hero-bg {
+      background-image: url('assets/images/hero.png');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+    }
+
+    .badge-card {
+      background: rgba(8, 35, 62, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 40px -15px rgba(4, 17, 30, 0.7);
+    }
+
+    .architectural-grid {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+
+    .modal-backdrop {
+      background-color: rgba(4, 19, 34, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #041322;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #144F80;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF8500;
+    }
+  </style>
+</head>
+<body class="bg-[#041322] min-h-screen text-white antialiased selection:bg-brand-orange selection:text-white">
+<!-- ==================== HEADER (NATIVO E INTEGRADO) ==================== -->
+<header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#071E33]/90 backdrop-blur-md transition-all duration-300">
+<div class="mx-auto flex h-[88px] max-w-7xl items-center justify-between px-6 lg:px-12">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3.5 group" href="#inicio">
+<div class="flex h-12 w-12 items-center justify-center"><img src="assets/images/logo.png" alt="BKS Metalúrgica Logo" class="h-12 w-12 object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 leading-none">
+<span class="text-xl font-extrabold tracking-tight text-white">BKS</span>
+<span class="text-xs font-bold tracking-[0.2em] text-brand-metallic">METALÚRGICA</span>
+</div>
+<span class="text-[10px] font-medium tracking-wider text-brand-metallic/80 mt-1 uppercase">Aço Inox de Alto Padrão</span>
+</div>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="relative py-2 text-sm font-semibold text-white tracking-wide transition-colors" href="#inicio">
+          Início
+          <span class="absolute bottom-0 left-0 right-0 h-[2.5px] rounded-full bg-brand-orange"></span>
+</a>
+<a class="text-sm font-medium text-brand-metallic hover:text-white transition-colors" href="#categorias">
+          Categorias
+        </a>
+<a class="text-sm font-medium text-brand-metallic hover:text-white transition-colors" href="#sobre">
+          Sobre
+        </a>
+<a class="text-sm font-medium text-brand-metallic hover:text-white transition-colors" href="#servicos">
+          Serviços
+        </a>
+<a class="text-sm font-medium text-brand-metallic hover:text-white transition-colors" href="#portfolio">
+          Projetos
+        </a>
+<a class="text-sm font-medium text-brand-metallic hover:text-white transition-colors" href="#contato">
+          Contato
+        </a>
+</nav>
+<!-- CTA Header -->
+<div class="flex items-center gap-4">
+<a class="hidden md:inline-flex items-center gap-2.5 h-[46px] px-6 rounded-lg bg-brand-orange text-white text-sm font-bold shadow-lg shadow-brand-orange/25 hover:bg-brand-orangeHover transition-all transform hover:-translate-y-0.5" href="#contato">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+</svg>
+<span class="">Peça seu orçamento</span>
+</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu de navegação" class="md:hidden flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-lg border border-white/15 bg-white/5 text-white transition-colors hover:border-brand-orange hover:text-brand-orange" id="mobile-menu-button" type="button">
+<span class="h-0.5 w-5 bg-current transition-transform"></span>
+<span class="h-0.5 w-5 bg-current transition-opacity"></span>
+<span class="h-0.5 w-5 bg-current transition-transform"></span>
+</button>
+</div>
+</div>
+<div class="hidden border-t border-white/10 bg-[#071E33] px-5 py-5 shadow-2xl md:hidden" id="mobile-menu">
+<nav aria-label="Navegação mobile" class="mx-auto flex max-w-7xl flex-col">
+<a class="mobile-menu-link border-b border-white/10 px-2 py-3.5 text-sm font-semibold text-white transition-colors hover:text-brand-orange" href="#inicio">Início</a>
+<a class="mobile-menu-link border-b border-white/10 px-2 py-3.5 text-sm font-semibold text-brand-metallic transition-colors hover:text-white" href="#categorias">Categorias</a>
+<a class="mobile-menu-link border-b border-white/10 px-2 py-3.5 text-sm font-semibold text-brand-metallic transition-colors hover:text-white" href="#sobre">Sobre</a>
+<a class="mobile-menu-link border-b border-white/10 px-2 py-3.5 text-sm font-semibold text-brand-metallic transition-colors hover:text-white" href="#servicos">Serviços</a>
+<a class="mobile-menu-link border-b border-white/10 px-2 py-3.5 text-sm font-semibold text-brand-metallic transition-colors hover:text-white" href="#portfolio">Projetos</a>
+<a class="mobile-menu-link px-2 py-3.5 text-sm font-semibold text-brand-metallic transition-colors hover:text-white" href="#contato">Contato</a>
+<a class="mobile-menu-link mt-4 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-brand-orange px-5 text-sm font-bold text-white shadow-lg shadow-brand-orange/20 transition-colors hover:bg-brand-orangeHover" href="#contato">Peça seu orçamento</a>
+</nav>
+</div>
+</header>
+<!-- ==================== HERO SECTION PRESERVADA COM BACKGROUND REAL ==================== -->
+<section class="hero-bg relative min-h-screen w-full flex flex-col justify-center pt-[88px] overflow-hidden" id="inicio">
+<!-- Overlay com preservação da penumbra natural e escada visível à direita -->
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#071E33]/95 via-[#071E33]/70 to-transparent lg:from-[#071E33]/90 lg:via-[#071E33]/40 lg:to-transparent"></div>
+<div class="pointer-events-none absolute inset-0 md:hidden bg-[#071E33]/80"></div>
+<div class="relative z-20 mx-auto w-full max-w-7xl px-6 lg:px-12 py-16 lg:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-8">
+<!-- LADO ESQUERDO: CONTEÚDO (MAX-WIDTH ~620PX) -->
+<div class="lg:col-span-7 xl:col-span-6 flex flex-col justify-center max-w-[620px]">
+<!-- Eyebrow -->
+<div class="flex items-center gap-3 mb-5">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-white/90 uppercase">
+              Aço Inox que Transforma Espaços
+            </span>
+</div>
+<!-- Headline -->
+<h1 class="text-4xl sm:text-5xl lg:text-[64px] font-extrabold tracking-tight leading-[1.08] text-white mb-6">
+            Especialistas em <span class="text-brand-orange">aço inox</span> para projetos de <span class="text-brand-orange">alto padrão.</span>
+</h1>
+<!-- Descrição -->
+<p class="text-base sm:text-lg lg:text-[18px] leading-relaxed text-white/80 max-w-[550px] mb-8 font-normal">
+            Corrimão, guarda-corpo, puxador, molduras de hidrante e elevador, com acabamento impecável, resistência e design para obras <strong class="text-white font-semibold">residenciais e comerciais.</strong>
+</p>
+<!-- Diferenciais (4 Itens em Linha com Divisores Sutis) -->
+<div class="grid grid-cols-2 sm:flex sm:items-center sm:divide-x sm:divide-white/15 gap-4 sm:gap-0 pb-8 pt-2">
+<!-- 1. Qualidade -->
+<div class="flex items-center gap-3 sm:pr-5">
+<div class="text-brand-orange flex-shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Qualidade</span>
+<span class="text-xs text-brand-metallic">Desde 2008</span>
+</div>
+</div>
+<!-- 2. Residencial -->
+<div class="flex items-center gap-3 sm:px-5">
+<div class="text-brand-orange flex-shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Projetos</span>
+<span class="text-xs text-brand-metallic">Residencial</span>
+</div>
+</div>
+<!-- 3. Comercial -->
+<div class="flex items-center gap-3 sm:px-5">
+<div class="text-brand-orange flex-shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<rect height="20" rx="2" ry="2" width="16" x="4" y="2"></rect>
+<line x1="9" x2="9" y1="22" y2="22.01"></line>
+<line x1="15" x2="15" y1="22" y2="22.01"></line>
+<line x1="9" x2="9" y1="6" y2="6.01"></line>
+<line x1="15" x2="15" y1="6" y2="6.01"></line>
+<line x1="9" x2="9" y1="10" y2="10.01"></line>
+<line x1="15" x2="15" y1="10" y2="10.01"></line>
+<line x1="9" x2="9" y1="14" y2="14.01"></line>
+<line x1="15" x2="15" y1="14" y2="14.01"></line>
+<line x1="9" x2="9" y1="18" y2="18.01"></line>
+<line x1="15" x2="15" y1="18" y2="18.01"></line>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Obras</span>
+<span class="text-xs text-brand-metallic">Comercial</span>
+</div>
+</div>
+<!-- 4. Solda TIG -->
+<div class="flex items-center gap-3 sm:pl-5">
+<div class="text-brand-orange flex-shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-white">Solda TIG</span>
+<span class="text-xs text-brand-metallic">Acabamento premium</span>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2 mb-8">
+<a class="inline-flex items-center justify-center gap-3 h-[56px] px-8 rounded-lg bg-brand-orange text-white text-base font-bold shadow-xl shadow-brand-orange/30 hover:bg-brand-orangeHover transition-all transform hover:-translate-y-0.5" href="#contato">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+<polyline points="14 2 14 8 20 8"></polyline>
+<line x1="16" x2="8" y1="13" y2="13"></line>
+<line x1="16" x2="8" y1="17" y2="17"></line>
+</svg>
+<span class="">Solicitar orçamento</span>
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<line x1="5" x2="19" y1="12" y2="12"></line>
+<polyline points="12 5 19 12 12 19"></polyline>
+</svg>
+</a>
+<a class="inline-flex items-center justify-center gap-2.5 h-[56px] px-8 rounded-lg border border-white/25 bg-white/5 text-white text-base font-semibold backdrop-blur-sm hover:bg-white/10 hover:border-white/40 transition-all" href="#portfolio">
+<svg class="w-4 h-4 text-brand-metallic" fill="currentColor" viewBox="0 0 24 24">
+<polygon points="5 3 19 12 5 21 5 3"></polygon>
+</svg>
+<span class="">Ver projetos</span>
+</a>
+</div>
+<!-- Linha de WhatsApp -->
+<div class="flex items-center gap-3 pt-2 text-sm text-white/90">
+<a class="flex items-center gap-2 text-white hover:text-brand-orange transition-colors" href="https://wa.me/5541995650632" rel="noopener noreferrer" target="_blank">
+<div class="flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366]/20 text-[#25D366]">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"></path>
+</svg>
+</div>
+<span class="font-bold tracking-wide">(41) 99565-0632</span>
+</a>
+<span class="text-white/30">|</span>
+<span class="text-brand-metallic text-xs sm:text-sm">Fale conosco pelo WhatsApp</span>
+</div>
+</div>
+<!-- LADO DIREITO: BADGES FLUTUANTES SOBRE A ESCADA ARQUITETÔNICA -->
+<div class="lg:col-span-5 xl:col-span-6 relative h-[480px] hidden lg:flex flex-col justify-between pointer-events-none">
+<!-- Badge 1: +16 anos -->
+<div class="badge-card pointer-events-auto self-end max-w-[260px] p-4 rounded-xl border border-white/15 transform hover:-translate-y-1 transition-transform">
+<span class="text-2xl font-black text-brand-orange tracking-tight">+16 anos</span>
+<p class="text-xs text-white/90 font-medium mt-1 leading-snug">transformando projetos em realidade.</p>
+</div>
+<!-- Badge 2: Acabamento Premium -->
+<div class="badge-card pointer-events-auto self-end mr-8 max-w-[280px] p-4 rounded-xl border border-white/15 flex items-center gap-3.5 transform hover:-translate-y-1 transition-transform">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-white uppercase tracking-wider">Acabamento premium</h4>
+<p class="text-[11px] text-brand-metallic mt-0.5">e alta resistência mecânica.</p>
+</div>
+</div>
+<!-- Badge 3: Soluções Sob Medida -->
+<div class="badge-card pointer-events-auto self-center max-w-[270px] p-4 rounded-xl border border-white/15 flex items-center gap-3.5 transform hover:-translate-y-1 transition-transform">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-orange/20 text-brand-orange border border-brand-orange/30">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path>
+<path d="m14.5 3.5 2 2"></path>
+<path d="m11.5 6.5 2 2"></path>
+<path d="m8.5 9.5 2 2"></path>
+<path d="m5.5 12.5 2 2"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-xs font-bold text-white uppercase tracking-wider">Soluções sob medida</h4>
+<p class="text-[11px] text-brand-metallic mt-0.5">desenvolvidas para o seu projeto.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 01: NAVEGAÇÃO DE PROJETOS POR CATEGORIA (FAIXA ARQUITETÔNICA HORIZONTAL) ==================== -->
+<section class="relative z-30 w-full bg-[#041322] border-t border-b border-white/10 pt-10 pb-12" id="categorias">
+<div class="mx-auto max-w-7xl px-6 lg:px-12 mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2.5 mb-2">
+<span class="h-[2px] w-5 bg-brand-orange"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">Explore Nossos Trabalhos</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Projetos por Categoria</h2>
+</div>
+<p class="text-sm text-brand-metallic max-w-md">Conheça projetos realizados pela BKS em diferentes aplicações do aço inox arquitetônico. Clique para explorar a galeria.</p>
+</div>
+<!-- Faixa Contínua de 5 Categorias (Snap no Mobile, Contíguo no Desktop) -->
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="flex overflow-x-auto snap-x snap-mandatory lg:grid lg:grid-cols-5 gap-3.5 pb-4 no-scrollbar">
+<!-- 1. CORRIMÃO -->
+<div class="group relative flex-shrink-0 w-[78vw] sm:w-[320px] lg:w-auto h-[170px] sm:h-[185px] rounded-xl overflow-hidden cursor-pointer border border-white/10 snap-center shadow-lg transition-all duration-300 hover:border-brand-orange/60" onclick="openCategoryModal('corrimao')">
+<img alt="Corrimão em Aço Inox" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/handrail.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-[#041322]/60 to-transparent group-hover:via-[#041322]/40 transition-colors"></div>
+<div class="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+<span class="text-xs font-extrabold text-white tracking-wider uppercase group-hover:text-brand-orange transition-colors">CORRIMÃO</span>
+<div class="h-[3px] w-6 bg-brand-orange rounded-full mt-2 transition-all duration-300 group-hover:w-14"></div>
+</div>
+</div>
+<!-- 2. GUARDA-CORPO -->
+<div class="group relative flex-shrink-0 w-[78vw] sm:w-[320px] lg:w-auto h-[170px] sm:h-[185px] rounded-xl overflow-hidden cursor-pointer border border-white/10 snap-center shadow-lg transition-all duration-300 hover:border-brand-orange/60" onclick="openCategoryModal('guarda-corpo')">
+<img alt="Guarda-Corpo em Aço Inox" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/residential.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-[#041322]/60 to-transparent group-hover:via-[#041322]/40 transition-colors"></div>
+<div class="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+<span class="text-xs font-extrabold text-white tracking-wider uppercase group-hover:text-brand-orange transition-colors">GUARDA-CORPO</span>
+<div class="h-[3px] w-6 bg-brand-orange rounded-full mt-2 transition-all duration-300 group-hover:w-14"></div>
+</div>
+</div>
+<!-- 3. PUXADORES -->
+<div class="group relative flex-shrink-0 w-[78vw] sm:w-[320px] lg:w-auto h-[170px] sm:h-[185px] rounded-xl overflow-hidden cursor-pointer border border-white/10 snap-center shadow-lg transition-all duration-300 hover:border-brand-orange/60" onclick="openCategoryModal('puxadores')">
+<img alt="Puxadores em Inox" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/entrance.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-[#041322]/60 to-transparent group-hover:via-[#041322]/40 transition-colors"></div>
+<div class="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+<span class="text-xs font-extrabold text-white tracking-wider uppercase group-hover:text-brand-orange transition-colors">PUXADORES</span>
+<div class="h-[3px] w-6 bg-brand-orange rounded-full mt-2 transition-all duration-300 group-hover:w-14"></div>
+</div>
+</div>
+<!-- 4. MOLDURAS DE HIDRANTE -->
+<div class="group relative flex-shrink-0 w-[78vw] sm:w-[320px] lg:w-auto h-[170px] sm:h-[185px] rounded-xl overflow-hidden cursor-pointer border border-white/10 snap-center shadow-lg transition-all duration-300 hover:border-brand-orange/60" onclick="openCategoryModal('molduras-hidrante')">
+<img alt="Molduras de Hidrante" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/hydrant.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-[#041322]/60 to-transparent group-hover:via-[#041322]/40 transition-colors"></div>
+<div class="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+<span class="text-xs font-extrabold text-white tracking-wider uppercase group-hover:text-brand-orange transition-colors">MOLDURAS DE HIDRANTE</span>
+<div class="h-[3px] w-6 bg-brand-orange rounded-full mt-2 transition-all duration-300 group-hover:w-14"></div>
+</div>
+</div>
+<!-- 5. ELEVADORES -->
+<div class="group relative flex-shrink-0 w-[78vw] sm:w-[320px] lg:w-auto h-[170px] sm:h-[185px] rounded-xl overflow-hidden cursor-pointer border border-white/10 snap-center shadow-lg transition-all duration-300 hover:border-brand-orange/60" onclick="openCategoryModal('elevadores')">
+<img alt="Molduras de Elevador em Aço Inox" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" src="assets/images/elevator.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-[#041322]/60 to-transparent group-hover:via-[#041322]/40 transition-colors"></div>
+<div class="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+<span class="text-xs font-extrabold text-white tracking-wider uppercase group-hover:text-brand-orange transition-colors">MOLDURAS DE ELEVADOR</span>
+<div class="h-[3px] w-6 bg-brand-orange rounded-full mt-2 transition-all duration-300 group-hover:w-14"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 02: SOBRE A BKS (COMPOSIÇÃO EDITORIAL) ==================== -->
+<section class="relative py-24 bg-[#071E33] architectural-grid overflow-hidden" id="sobre">
+<div class="mx-auto max-w-7xl px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Texto Editorial à Esquerda -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">Experiência que se transforma em acabamento</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-8">
+            Há mais de 16 anos transformando projetos em realidade.
+          </h2>
+<p class="text-base sm:text-lg text-white/85 leading-relaxed mb-6 font-normal">
+            Desde 2008, a BKS Metalúrgica desenvolve soluções em aço inox para projetos residenciais e comerciais, unindo resistência, funcionalidade e acabamento cuidadoso.
+          </p>
+<p class="text-base text-brand-metallic leading-relaxed mb-10 font-normal">
+            Cada projeto possui medidas, necessidades e características próprias. Por isso, trabalhamos com soluções desenvolvidas de acordo com cada aplicação arquitetônica.
+          </p>
+<!-- Bloco do Número de Impacto -->
+<div class="flex items-center gap-6 pt-6 border-t border-white/10">
+<div class="text-6xl sm:text-7xl font-black text-brand-orange tracking-tight leading-none">+16</div>
+<div class="flex flex-col">
+<span class="text-base sm:text-lg font-bold text-white uppercase tracking-wider">anos de experiência</span>
+<span class="text-xs sm:text-sm text-brand-metallic">Fabricação sob medida e solda TIG com padrão industrial nobre.</span>
+</div>
+</div>
+</div>
+<!-- Fotografia Real de Fabricação à Direita -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
+<img alt="Processo de Solda TIG na BKS Metalúrgica" class="w-full h-[460px] object-cover" src="assets/images/welding-process.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-transparent to-transparent"></div>
+<!-- Badge fixado na imagem -->
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#082B4C]/90 backdrop-blur-md border border-white/15 shadow-lg">
+<div class="flex items-center gap-3">
+<div class="h-9 w-9 rounded-lg bg-brand-orange/20 flex items-center justify-center text-brand-orange">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+</div>
+<div>
+<span class="text-xs font-bold text-white uppercase tracking-wider block">Qualidade &amp; Procedência</span>
+<span class="text-[11px] text-brand-metallic">Inox certificado com liga de alta durabilidade.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><!-- ==================== NOVA SEÇÃO INSTITUCIONAL: QUEM ESTÁ À FRENTE DOS PROJETOS ==================== -->
+<section class="relative py-24 bg-[#F5F5F2] text-[#071E33] overflow-hidden border-t border-b border-black/10" id="lideranca">
+<!-- Gradiente sutil escovado e textura técnica metálica suave -->
+<div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/80 via-[#F5F5F2] to-[#E9ECEF]/70"></div>
+<div class="pointer-events-none absolute inset-0 opacity-[0.035] architectural-grid"></div>
+<div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- LADO ESQUERDO: FOTOGRAFIA REAL DO FUNDADOR COM DETALHES TÉCNICOS (~45% - lg:col-span-5) -->
+<div class="lg:col-span-5 relative">
+<!-- Moldura decorativa em linha técnica arquitetônica -->
+<div class="absolute -inset-2.5 rounded-[28px] border border-brand-orange/40 pointer-events-none hidden sm:block transform -rotate-1"></div>
+<div class="relative rounded-[24px] overflow-hidden shadow-2xl bg-[#041322] border border-black/10">
+<img alt="Liderança e Responsável Técnico - BKS Metalúrgica" class="w-full h-[520px] lg:h-[580px] object-cover object-top filter contrast-[1.02]" src="assets/images/founder.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322]/80 via-transparent to-transparent"></div>
+<!-- Badge inferior sobre a imagem com selo de acabamento técnico -->
+<div class="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#082B4C]/95 backdrop-blur-md border border-white/20 text-white shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-orange/20 border border-brand-orange/40 text-brand-orange">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+</svg>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-white block leading-tight">Presença &amp; Acompanhamento</span>
+<span class="text-[11px] text-white/70">Em cada etapa do seu projeto</span>
+</div>
+</div>
+<span class="text-xs font-extrabold text-brand-orange tracking-widest uppercase">BKS</span>
+</div>
+</div>
+</div>
+<!-- LADO DIREITO: CONTEÚDO EDITORIAL (~55% - lg:col-span-7) -->
+<div class="lg:col-span-7 flex flex-col justify-center">
+<!-- 1. Eyebrow -->
+<div class="flex items-center gap-3 mb-4">
+<span class="h-[2.5px] w-8 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">
+            QUEM ESTÁ À FRENTE DOS PROJETOS
+          </span>
+</div>
+<!-- 2. Headline -->
+<h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight leading-[1.15] text-[#071E33] mb-6">
+          Experiência de quem <span class="text-brand-orange">acompanha cada detalhe.</span>
+</h2>
+<!-- 3. Texto Principal (3 Parágrafos) -->
+<div class="space-y-4 text-base sm:text-[16.5px] leading-relaxed text-[#233144] mb-8 font-normal font-body">
+<p class="">
+            À frente da BKS Metalúrgica está uma atuação próxima de cada projeto, acompanhando desde o entendimento da necessidade até os detalhes que fazem diferença no resultado final.
+          </p>
+<p class="">
+            Mais do que fabricar peças em aço inox, o trabalho envolve compreender o ambiente, avaliar cada aplicação e buscar uma solução que una resistência, funcionalidade e acabamento.
+          </p>
+<p class="">
+            Essa proximidade com cada obra permite que os projetos sejam conduzidos com atenção às medidas, ao uso do espaço e às particularidades de cada cliente.
+          </p>
+</div>
+<!-- 4. Citação Arquitetônica de Destaque -->
+<div class="mb-8 p-5 sm:p-6 rounded-2xl bg-white border-l-4 border-brand-orange border border-black/5 shadow-sm">
+<p class="text-base sm:text-lg font-bold italic text-[#071E33] leading-snug tracking-tight">
+            “Cada projeto é diferente. A solução também precisa ser.”
+          </p>
+</div>
+<!-- 5. Três Diferenciais Lineares com Ícones Sutis -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-2">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-white/70 border border-black/5">
+<div class="h-8 w-8 rounded-lg bg-brand-orange/15 text-brand-orange flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071E33]">Acompanhamento próximo</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-white/70 border border-black/5">
+<div class="h-8 w-8 rounded-lg bg-brand-orange/15 text-brand-orange flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-[#071E33]">Experiência prática</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-white/70 border border-black/5"><div class="h-8 w-8 rounded-lg bg-brand-orange/15 text-brand-orange flex items-center justify-center shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path><path d="m14.5 3.5 2 2"></path><path d="m11.5 6.5 2 2"></path><path d="m8.5 9.5 2 2"></path><path d="m5.5 12.5 2 2"></path></svg></div><span class="text-xs font-bold uppercase tracking-wider text-[#071E33]">Soluções sob medida</span></div></div></div></div></div></section>
+<!-- ==================== SEÇÃO 03: ESPECIALISTAS EM AÇO INOX (SOLUÇÕES ARQUITETÔNICAS) ==================== -->
+<section class="py-24 bg-[#041322] border-t border-white/10" id="servicos">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="max-w-2xl mb-16">
+<div class="flex items-center gap-3 mb-3">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">O que fazemos</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Soluções em inox para diferentes projetos.
+        </h2>
+</div>
+<!-- Composição Arquitetônica Assimétrica com 5 Serviços -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+<!-- 01. Corrimãos (Destaque Coluna Larga) -->
+<div class="lg:col-span-7 group rounded-2xl bg-[#08233E]/60 border border-white/10 p-8 hover:border-brand-orange/50 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-8">
+<span class="text-4xl font-black text-brand-orange/60 group-hover:text-brand-orange transition-colors">01</span>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-brand-metallic">Acessibilidade &amp; Design</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-3">CORRIMÃOS</h3>
+<p class="text-base text-brand-metallic leading-relaxed">
+              Segurança, resistência e acabamento para escadas, acessos e diferentes ambientes residenciais ou de alto fluxo.
+            </p>
+</div>
+</div>
+<!-- 02. Guarda-Corpos -->
+<div class="lg:col-span-5 group rounded-2xl bg-[#08233E]/60 border border-white/10 p-8 hover:border-brand-orange/50 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-8">
+<span class="text-4xl font-black text-brand-orange/60 group-hover:text-brand-orange transition-colors">02</span>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-brand-metallic">Segurança Arquitetônica</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-3">GUARDA-CORPOS</h3>
+<p class="text-base text-brand-metallic leading-relaxed">
+              Soluções que combinam proteção, aço inox e integração estética com a arquitetura do projeto.
+            </p>
+</div>
+</div>
+<!-- 03. Puxadores -->
+<div class="lg:col-span-4 group rounded-2xl bg-[#08233E]/60 border border-white/10 p-8 hover:border-brand-orange/50 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-8">
+<span class="text-4xl font-black text-brand-orange/60 group-hover:text-brand-orange transition-colors">03</span>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-brand-metallic">Acessos Nobres</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-3">PUXADORES</h3>
+<p class="text-sm text-brand-metallic leading-relaxed">
+              Peças desenvolvidas para portas e acessos, com acabamento resistente e visual sofisticado.
+            </p>
+</div>
+</div>
+<!-- 04. Molduras de Hidrante -->
+<div class="lg:col-span-4 group rounded-2xl bg-[#08233E]/60 border border-white/10 p-8 hover:border-brand-orange/50 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-8">
+<span class="text-4xl font-black text-brand-orange/60 group-hover:text-brand-orange transition-colors">04</span>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-brand-metallic">Engenharia &amp; Incêndio</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-3">MOLDURAS DE HIDRANTE</h3>
+<p class="text-sm text-brand-metallic leading-relaxed">
+              Acabamento em aço inox para integrar os equipamentos de segurança ao projeto arquitetônico.
+            </p>
+</div>
+</div>
+<!-- 05. Molduras de Elevador -->
+<div class="lg:col-span-4 group rounded-2xl bg-[#08233E]/60 border border-white/10 p-8 hover:border-brand-orange/50 transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-8">
+<span class="text-4xl font-black text-brand-orange/60 group-hover:text-brand-orange transition-colors">05</span>
+<span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/5 border border-white/10 text-brand-metallic">Portais &amp; Halls</span>
+</div>
+<div>
+<h3 class="text-2xl font-bold text-white mb-3">MOLDURAS DE ELEVADOR</h3>
+<p class="text-sm text-brand-metallic leading-relaxed">
+              Soluções em inox para acabamento e valorização das áreas de elevadores e portais de entrada.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 04: RESIDENCIAL + COMERCIAL (UNIVERSO DUPLO) ==================== -->
+<section class="py-24 bg-[#071E33] border-t border-white/10">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!-- UNIVERSO 01: RESIDENCIAL -->
+<div class="rounded-3xl bg-[#04192D] border border-white/15 overflow-hidden flex flex-col justify-between">
+<div class="p-8 sm:p-10">
+<div class="flex items-center gap-2 text-brand-orange text-xs font-bold uppercase tracking-[0.2em] mb-4">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+<span class="">Residencial</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+              Detalhes que valorizam cada ambiente.
+            </h3>
+<p class="text-sm sm:text-base text-white/80 leading-relaxed mb-6">
+              Soluções em aço inox para residências que buscam segurança, durabilidade e integração com a arquitetura.
+            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Escadas</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Sacadas</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Corrimãos</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Guarda-corpos</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Puxadores</span>
+</div>
+</div>
+<div class="h-[280px] w-full overflow-hidden">
+<img alt="Aço Inox Residencial de Alto Padrão" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="assets/images/residential.png">
+</div>
+</div>
+<!-- UNIVERSO 02: COMERCIAL -->
+<div class="rounded-3xl bg-[#04192D] border border-white/15 overflow-hidden flex flex-col justify-between">
+<div class="p-8 sm:p-10">
+<div class="flex items-center gap-2 text-brand-orange text-xs font-bold uppercase tracking-[0.2em] mb-4">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect height="20" rx="2" ry="2" width="16" x="4" y="2"></rect></svg>
+<span class="">Comercial</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">
+              Resistência e acabamento para projetos profissionais.
+            </h3>
+<p class="text-sm sm:text-base text-white/80 leading-relaxed mb-6">
+              Soluções desenvolvidas para empresas, edifícios e espaços comerciais que exigem durabilidade e acabamento consistente.
+            </p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Edifícios Corporativos</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Molduras de Elevador</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Portais de Inox</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Molduras de Hidrante</span>
+<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-brand-metallic">Normas Técnicas</span>
+</div>
+</div>
+<div class="h-[280px] w-full overflow-hidden">
+<img alt="Aço Inox Comercial e Edifícios" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="assets/images/commercial.png">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 05: ACABAMENTO / SOLDA TIG ==================== -->
+<section class="py-24 bg-[#041322] border-t border-white/10 relative overflow-hidden">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6">
+<div class="flex items-center gap-3 mb-4">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">Precisão nos detalhes</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            O acabamento faz parte do projeto.
+          </h2>
+<p class="text-base sm:text-lg text-white/85 leading-relaxed mb-10">A BKS utiliza solda plasma e processos de acabamento voltados à precisão, resistência e qualidade visual das peças.</p>
+<!-- 3 Pontos Integrados à Composição -->
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 shrink-0 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Solda Plasma</h4>
+<p class="text-sm text-brand-metallic">Processo de alta precisão que permite maior controle na soldagem e um acabamento mais uniforme, especialmente em aplicações que exigem cuidado nos detalhes.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 shrink-0 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Acabamento premium</h4>
+<p class="text-sm text-brand-metallic">Processos cuidadosos de polimento escovado ou espelhado garantindo uniformidade em cada detalhe.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="h-10 w-10 shrink-0 rounded-xl bg-brand-orange/20 border border-brand-orange/40 flex items-center justify-center text-brand-orange">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"></path></svg>
+</div>
+<div>
+<h4 class="text-lg font-bold text-white mb-1">Soluções sob medida</h4>
+<p class="text-sm text-brand-metallic">Ajuste milimétrico para harmonizar perfeitamente com os alinhamentos e desníveis da obra.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+<img alt="Usinagem e Soldagem de Precisão em Tubos de Aço Inox" class="w-full h-[480px] object-cover" src="assets/images/precision-welding.png">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 06: COMO TRABALHAMOS (TIMELINE HORIZONTAL) ==================== -->
+<section class="py-24 bg-[#071E33] border-t border-white/10">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="max-w-2xl mb-16">
+<div class="flex items-center gap-3 mb-3">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">Do projeto à instalação</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Cada projeto começa entendendo a necessidade.
+        </h2>
+</div>
+<!-- Timeline Horizontal -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+<div class="hidden md:block absolute top-7 left-12 right-12 h-[2px] bg-white/15 z-0"></div>
+<!-- Etapa 01 -->
+<div class="relative z-10 flex flex-col">
+<div class="h-14 w-14 rounded-full bg-[#082B4C] border-2 border-brand-orange flex items-center justify-center text-sm font-extrabold text-white mb-6 shadow-md">01</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">ENTENDIMENTO</h4>
+<p class="text-sm text-brand-metallic leading-relaxed">Entendemos a necessidade, o ambiente e as características do projeto.</p>
+</div>
+<!-- Etapa 02 -->
+<div class="relative z-10 flex flex-col">
+<div class="h-14 w-14 rounded-full bg-[#082B4C] border-2 border-brand-orange flex items-center justify-center text-sm font-extrabold text-white mb-6 shadow-md">02</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">MEDIDAS E DEFINIÇÃO</h4>
+<p class="text-sm text-brand-metallic leading-relaxed">Definimos dimensões, aplicação e solução adequada para cada espaço.</p>
+</div>
+<!-- Etapa 03 -->
+<div class="relative z-10 flex flex-col">
+<div class="h-14 w-14 rounded-full bg-[#082B4C] border-2 border-brand-orange flex items-center justify-center text-sm font-extrabold text-white mb-6 shadow-md">03</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">FABRICAÇÃO</h4>
+<p class="text-sm text-brand-metallic leading-relaxed">As peças são produzidas de acordo com as especificações definidas.</p>
+</div>
+<!-- Etapa 04 -->
+<div class="relative z-10 flex flex-col">
+<div class="h-14 w-14 rounded-full bg-[#082B4C] border-2 border-brand-orange flex items-center justify-center text-sm font-extrabold text-white mb-6 shadow-md">04</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">ACABAMENTO</h4>
+<p class="text-sm text-brand-metallic leading-relaxed">Realizamos os processos necessários para entregar o padrão visual esperado.</p>
+</div>
+<!-- Etapa 05 -->
+<div class="relative z-10 flex flex-col">
+<div class="h-14 w-14 rounded-full bg-[#082B4C] border-2 border-brand-orange flex items-center justify-center text-sm font-extrabold text-white mb-6 shadow-md">05</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">INSTALAÇÃO</h4>
+<p class="text-sm text-brand-metallic leading-relaxed">A solução é instalada com precisão no ambiente do projeto.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 07: PORTFÓLIO EM DESTAQUE ==================== -->
+<section class="py-24 bg-[#041322] border-t border-white/10" id="portfolio">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">Projetos BKS</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Aço inox aplicado em projetos reais.
+          </h2>
+</div>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-brand-orange hover:text-white transition-colors" href="#categorias">
+<span class="">Ver todas as categorias</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+</a>
+</div>
+<!-- Galeria Editorial: Foto Principal Grande + Grade de Apoio -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Foto Principal Grande -->
+<div class="lg:col-span-8 group relative h-[380px] sm:h-[480px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-xl" onclick="openLightbox('assets/images/hero.png', 'Escada Flutuante Contemporânea com Inox e Vidro')">
+<img alt="Escada Contemporânea em Aço Inox" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/images/hero.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-[#041322]/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+<div>
+<span class="px-3 py-1 rounded-md bg-brand-orange text-white text-[11px] font-bold uppercase tracking-wider mb-2 inline-block">RESIDENCIAL</span>
+<h3 class="text-xl sm:text-2xl font-bold text-white">Escada Flutuante com Guarda-Corpo em Inox e Vidro</h3>
+</div>
+<div class="h-10 w-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-brand-orange transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</div>
+</div>
+</div>
+<!-- Coluna Lateral com 2 Fotos -->
+<div class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+<div class="group relative h-[225px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-xl" onclick="openLightbox('assets/images/handrail.png', 'Corrimão Tubular em Aço Inox Acetinado')">
+<img alt="Corrimão em Aço Inox" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/images/handrail.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+<div>
+<span class="px-2.5 py-0.5 rounded bg-white/15 text-white text-[10px] font-bold uppercase tracking-wider mb-1 inline-block">CORRIMÃO</span>
+<h4 class="text-sm font-bold text-white">Fixação de Parede em Inox Acetinado</h4>
+</div>
+</div>
+</div>
+<div class="group relative h-[225px] rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-xl" onclick="openLightbox('assets/images/commercial.png', 'Molduras de Elevador e Painéis em Inox Comercial')">
+<img alt="Acabamento Comercial em Elevador" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/images/commercial.png">
+<div class="absolute inset-0 bg-gradient-to-t from-[#041322] via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+<div>
+<span class="px-2.5 py-0.5 rounded bg-white/15 text-white text-[10px] font-bold uppercase tracking-wider mb-1 inline-block">COMERCIAL</span>
+<h4 class="text-sm font-bold text-white">Portal e Revestimento de Elevador</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 08: POR QUE AÇO INOX? ==================== -->
+<section class="py-24 bg-[#071E33] border-t border-white/10">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="max-w-2xl mb-16">
+<div class="flex items-center gap-3 mb-3">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">A escolha do material</span>
+</div>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Por que escolher o aço inox?
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="p-6 rounded-2xl bg-[#08233E]/70 border border-white/10">
+<div class="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-orange mb-5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">DURABILIDADE</h4>
+<p class="text-xs sm:text-sm text-brand-metallic leading-relaxed">Material reconhecido pela resistência e longa vida útil sem degradação.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#08233E]/70 border border-white/10">
+<div class="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-orange mb-5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">RESISTÊNCIA À CORROSÃO</h4>
+<p class="text-xs sm:text-sm text-brand-metallic leading-relaxed">Adequado para diferentes aplicações, ambientes internos e externos.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#08233E]/70 border border-white/10">
+<div class="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-orange mb-5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">ESTÉTICA</h4>
+<p class="text-xs sm:text-sm text-brand-metallic leading-relaxed">O acabamento do inox se integra facilmente a projetos contemporâneos.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#08233E]/70 border border-white/10">
+<div class="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-orange mb-5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">MANUTENÇÃO</h4>
+<p class="text-xs sm:text-sm text-brand-metallic leading-relaxed">Superfícies práticas para limpeza, conservação e assepsia continuada.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#08233E]/70 border border-white/10">
+<div class="h-10 w-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-orange mb-5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><rect height="18" rx="2" ry="2" width="18" x="3" y="3"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg>
+</div>
+<h4 class="text-base font-bold text-white uppercase tracking-wider mb-2">VERSATILIDADE</h4>
+<p class="text-xs sm:text-sm text-brand-metallic leading-relaxed">Aplicável em diferentes soluções arquitetônicas sob medida.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 09: CTA DE ORÇAMENTO ==================== -->
+<section class="py-24 bg-gradient-to-r from-[#041322] via-[#0A3158] to-[#041322] border-t border-b border-white/10 relative overflow-hidden">
+<div class="mx-auto max-w-5xl px-6 lg:px-12 text-center relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-xs font-bold uppercase tracking-[0.2em] mb-6">
+        Seu projeto pode ser o próximo
+      </div>
+<h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+        Precisa de uma solução em aço inox?
+      </h2>
+<p class="text-base sm:text-lg text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
+        Conte para a BKS o que você precisa e solicite um orçamento para o seu projeto residencial ou comercial.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<a class="inline-flex items-center gap-3 h-[56px] px-8 rounded-lg bg-brand-orange text-white text-base font-bold shadow-xl shadow-brand-orange/30 hover:bg-brand-orangeHover transition-all transform hover:-translate-y-0.5" href="#contato">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+<span class="">Solicitar orçamento</span>
+</a>
+<a class="inline-flex items-center gap-3 h-[56px] px-8 rounded-lg bg-[#25D366] text-white text-base font-bold shadow-xl shadow-[#25D366]/20 hover:bg-[#20ba59] transition-all transform hover:-translate-y-0.5" href="https://wa.me/5541995650632" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.353.101.173.449.741.964 1.201.662.591 1.221.774 1.394.861.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"></path></svg>
+<span class="">Falar pelo WhatsApp (41) 99565-0632</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ==================== SEÇÃO 10: CONTATO ==================== -->
+<section class="py-24 bg-[#041322]" id="contato">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Formulário à Esquerda -->
+<div class="lg:col-span-7 bg-[#071E33] p-8 sm:p-10 rounded-3xl border border-white/10 shadow-2xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="h-[2px] w-6 bg-brand-orange rounded-full"></span>
+<span class="text-xs font-bold tracking-[0.25em] text-brand-orange uppercase">Fale com a BKS</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-8">
+            Vamos conversar sobre seu projeto.
+          </h2>
+<form class="space-y-5" id="leadForm" onsubmit="event.preventDefault(); alert('Solicitação enviada com sucesso! Nossa equipe técnica entrará em contato.');">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-brand-metallic mb-2">Nome</label>
+<input class="w-full h-12 px-4 rounded-xl bg-[#041322] border border-white/15 text-white placeholder-white/40 focus:outline-none focus:border-brand-orange transition-colors" placeholder="Seu nome completo" required="" type="text">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-brand-metallic mb-2">Telefone / WhatsApp</label>
+<input class="w-full h-12 px-4 rounded-xl bg-[#041322] border border-white/15 text-white placeholder-white/40 focus:outline-none focus:border-brand-orange transition-colors" placeholder="(41) 90000-0000" required="" type="tel">
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-brand-metallic mb-2">E-mail</label>
+<input class="w-full h-12 px-4 rounded-xl bg-[#041322] border border-white/15 text-white placeholder-white/40 focus:outline-none focus:border-brand-orange transition-colors" placeholder="seu@email.com" required="" type="email">
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-brand-metallic mb-2">Tipo de projeto</label>
+<select class="w-full h-12 px-4 rounded-xl bg-[#041322] border border-white/15 text-white focus:outline-none focus:border-brand-orange transition-colors">
+<option value="corrimao">Corrimão</option>
+<option value="guarda-corpo">Guarda-corpo</option>
+<option value="puxadores">Puxadores</option>
+<option value="moldura-hidrante">Moldura de hidrante</option>
+<option value="elevador">Elevador</option>
+<option value="outro">Outro projeto sob medida</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-wider text-brand-metallic mb-2">Mensagem</label>
+<textarea class="w-full p-4 rounded-xl bg-[#041322] border border-white/15 text-white placeholder-white/40 focus:outline-none focus:border-brand-orange transition-colors" placeholder="Descreva brevemente as medidas, especificações ou detalhes do local..." rows="4"></textarea>
+</div>
+<button class="w-full h-[54px] rounded-xl bg-brand-orange text-white font-bold text-base shadow-xl shadow-brand-orange/30 hover:bg-brand-orangeHover transition-all" type="submit">
+              Enviar solicitação
+            </button>
+</form>
+</div>
+<!-- Informações Oficiais à Direita -->
+<div class="lg:col-span-5 flex flex-col justify-between py-4">
+<div>
+<h3 class="text-2xl font-black text-white mb-6">BKS Metalúrgica</h3>
+<p class="text-brand-metallic leading-relaxed mb-8">
+              Especialistas em aço inox para projetos residenciais e comerciais. Atendimento técnico e fabricação de alto padrão.
+            </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-brand-orange/20 border border-brand-orange/30 flex items-center justify-center text-brand-orange">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+</div>
+<div>
+<span class="text-xs font-bold text-brand-metallic uppercase tracking-wider block">WhatsApp Oficial</span>
+<a class="text-lg font-bold text-white hover:text-brand-orange transition-colors" href="https://wa.me/5541995650632" target="_blank">(41) 99565-0632</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-brand-orange/20 border border-brand-orange/30 flex items-center justify-center text-brand-orange">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</div>
+<div>
+<span class="text-xs font-bold text-brand-metallic uppercase tracking-wider block">Instagram</span>
+<span class="text-lg font-bold text-white">@bksmetalurgica</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-brand-orange/20 border border-brand-orange/30 flex items-center justify-center text-brand-orange">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+</div>
+<div>
+<span class="text-xs font-bold text-brand-metallic uppercase tracking-wider block">Atendimento</span>
+<span class="text-sm font-semibold text-white">Projetos residenciais e comerciais</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 p-6 rounded-2xl bg-[#082B4C]/40 border border-white/10">
+<span class="text-xs font-bold text-brand-orange uppercase tracking-wider block mb-1">Qualidade Assegurada</span>
+<p class="text-xs text-brand-metallic leading-relaxed">Estrutura técnica própria, profissionais especializados em acabamentos nobres e solda TIG com precisão milimétrica.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-[#020B14] border-t border-white/10 pt-16 pb-12 text-white">
+<div class="mx-auto max-w-7xl px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+<div class="lg:col-span-4">
+<div class="flex items-center gap-3.5 mb-4">
+<div class="flex h-10 w-10 items-center justify-center"><img src="assets/images/logo.png" alt="BKS Metalúrgica Logo" class="h-10 w-10 object-contain drop-shadow-sm"></div>
+<span class="text-xl font-extrabold tracking-tight text-white">BKS <span class="text-brand-metallic text-xs font-bold tracking-[0.2em]">METALÚRGICA</span></span>
+</div>
+<p class="text-sm text-brand-metallic leading-relaxed max-w-sm mb-4">
+            Especialistas em aço inox para projetos residenciais e comerciais. Qualidade e precisão desde 2008.
+          </p>
+</div>
+<div class="lg:col-span-3">
+<h4 class="text-xs font-bold uppercase tracking-wider text-brand-orange mb-4">Navegação</h4>
+<ul class="space-y-2.5 text-sm text-brand-metallic">
+<li class=""><a class="hover:text-white transition-colors" href="#inicio">Início</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#categorias">Categorias de Projetos</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#sobre">Sobre a BKS</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#servicos">Serviços Especializados</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#portfolio">Portfólio</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#contato">Solicitar Orçamento</a></li>
+</ul>
+</div>
+<div class="lg:col-span-3">
+<h4 class="text-xs font-bold uppercase tracking-wider text-brand-orange mb-4">Soluções em Inox</h4>
+<ul class="space-y-2.5 text-sm text-brand-metallic">
+<li class=""><span class="hover:text-white cursor-pointer" onclick="openCategoryModal('corrimao')">Corrimãos em Inox</span></li>
+<li class=""><span class="hover:text-white cursor-pointer" onclick="openCategoryModal('guarda-corpo')">Guarda-corpos e Vidros</span></li>
+<li class=""><span class="hover:text-white cursor-pointer" onclick="openCategoryModal('puxadores')">Puxadores Sob Medida</span></li>
+<li class=""><span class="hover:text-white cursor-pointer" onclick="openCategoryModal('molduras-hidrante')">Molduras de Hidrante</span></li>
+<li class=""><span class="hover:text-white cursor-pointer" onclick="openCategoryModal('elevadores')">Molduras de Elevador</span></li>
+</ul>
+</div>
+<div class="lg:col-span-2">
+<h4 class="text-xs font-bold uppercase tracking-wider text-brand-orange mb-4">Contato Direto</h4>
+<ul class="space-y-2.5 text-sm text-brand-metallic">
+<li class=""><a class="hover:text-brand-orange transition-colors" href="https://wa.me/5541995650632" target="_blank">(41) 99565-0632</a></li>
+<li class=""><span class="">@bksmetalurgica</span></li>
+<li class=""><span class="text-xs text-white/50">Curitiba e Região</span></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-metallic/80 gap-4">
+<span class="">© BKS Metalúrgica. Todos os direitos reservados.</span>
+<span class="">Aço Inoxidável Arquitetônico de Alto Padrão</span>
+</div>
+</div>
+</footer>
+<!-- ==================== MODAL / LIGHTBOX DE CATEGORIAS INTERATIVO ==================== -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 lg:p-10 modal-backdrop" id="categoryModal">
+<div class="relative w-full max-w-5xl max-h-[90vh] bg-[#071E33] border border-white/20 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+<!-- Topo do Modal -->
+<div class="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-[#041322]/80">
+<div>
+<span class="text-xs font-bold text-brand-orange uppercase tracking-[0.2em] block mb-1">Galeria de Trabalhos</span>
+<h3 class="text-xl sm:text-2xl font-extrabold text-white" id="modalTitle">Projetos de Corrimão</h3>
+</div>
+<button class="h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors" onclick="closeCategoryModal()">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+</div>
+<!-- Conteúdo Editorial da Galeria -->
+<div class="p-6 overflow-y-auto space-y-6">
+<p class="text-sm text-brand-metallic leading-relaxed max-w-2xl" id="modalLead"></p>
+<!-- Imagem Principal Grande da Categoria -->
+<div class="relative h-[320px] sm:h-[420px] rounded-xl overflow-hidden border border-white/10 shadow-lg">
+<img alt="" class="w-full h-full object-cover" id="modalMainImg" src="">
+</div>
+<!-- Grade Secundária de Fotos da Categoria -->
+<div>
+<h4 class="text-xs font-bold uppercase tracking-wider text-white/70 mb-3">Variações e Detalhes da Aplicação</h4>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="modalSecondaryGrid">
+<!-- Inserido dinamicamente via JS -->
+</div>
+</div>
+</div>
+<!-- Rodapé do Modal com Ação de Orçamento -->
+<div class="px-6 py-4 border-t border-white/10 bg-[#041322] flex flex-col sm:flex-row items-center justify-between gap-4">
+<span class="text-xs text-brand-metallic">Fotografias demonstrativas do acervo técnico da BKS Metalúrgica.</span>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 h-[44px] px-6 rounded-lg bg-brand-orange text-white text-sm font-bold shadow-md hover:bg-brand-orangeHover transition-colors" href="https://wa.me/5541995650632?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20este%20tipo%20de%20projeto." id="modalWhatsAppCTA" target="_blank">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+<span class="">Quero um projeto como este</span>
+</a>
+</div>
+</div>
+</div>
+<!-- LIGHTBOX SIMPLES PARA QUALQUER FOTO DO PORTFÓLIO -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-backdrop" id="lightboxModal" onclick="closeLightbox()">
+<div class="relative max-w-4xl max-h-[85vh] p-2 bg-[#041322] border border-white/20 rounded-2xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+<button class="absolute top-4 right-4 z-10 h-9 w-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/90" onclick="closeLightbox()">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+</button>
+<img alt="" class="max-h-[75vh] w-auto object-contain rounded-xl mx-auto" id="lightboxImg" src="">
+<div class="py-3 px-4 text-center text-sm font-semibold text-white" id="lightboxCaption"></div>
+</div>
+</div>
+<!-- ==================== LOGICA JAVASCRIPT NATIVA ==================== -->
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function setMobileMenu(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      mobileMenuButton.setAttribute('aria-expanded', String(open));
+      mobileMenuButton.setAttribute('aria-label', open ? 'Fechar menu de navegação' : 'Abrir menu de navegação');
+
+      const bars = mobileMenuButton.querySelectorAll('span');
+      bars[0].classList.toggle('translate-y-2', open);
+      bars[0].classList.toggle('rotate-45', open);
+      bars[1].classList.toggle('opacity-0', open);
+      bars[2].classList.toggle('-translate-y-2', open);
+      bars[2].classList.toggle('-rotate-45', open);
+    }
+
+    mobileMenuButton.addEventListener('click', () => {
+      setMobileMenu(mobileMenuButton.getAttribute('aria-expanded') !== 'true');
+    });
+
+    document.querySelectorAll('.mobile-menu-link').forEach((link) => {
+      link.addEventListener('click', () => setMobileMenu(false));
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) setMobileMenu(false);
+    });
+
+    const categoriesData = {
+      'corrimao': {
+        title: 'Projetos de Corrimão em Aço Inox',
+        lead: 'Corrimãos residenciais e comerciais desenvolvidos sob medida em aço inox escovado ou polido, com conformidade técnica e fixações estruturais ocultas.',
+        mainImg: 'assets/images/handrail.png',
+        thumbnails: ['assets/images/entrance.png', 'assets/images/hero.png', 'assets/images/welding-process.png']
+      },
+      'guarda-corpo': {
+        title: 'Projetos de Guarda-corpo em Inox e Vidro',
+        lead: 'Integração precisa entre estrutura em aço inoxidável e painéis de vidro de alta segurança para mezaninos, sacadas e escadas de alto padrão.',
+        mainImg: 'assets/images/residential.png',
+        thumbnails: ['assets/images/hero.png', 'assets/images/elevator.png', 'assets/images/handrail.png']
+      },
+      'puxadores': {
+        title: 'Puxadores Nobres Sob Medida',
+        lead: 'Puxadores retos, curvos, tubulares e com geometrias personalizadas para portas de entrada nobres em residências e salas de diretoria.',
+        mainImg: 'assets/images/hero.png',
+        thumbnails: ['assets/images/handrail.png', 'assets/images/welding-process.png', 'assets/images/residential.png']
+      },
+      'molduras-hidrante': {
+        title: 'Molduras de Hidrante em Aço Inox',
+        lead: 'Acabamentos e caixas de abrigo em aço inox escovado que integram a infraestrutura obrigatória de combate a incêndio à estética do projeto arquitetônico.',
+        mainImg: 'assets/images/welding-process.png',
+        thumbnails: ['assets/images/commercial.png', 'assets/images/handrail.png', 'assets/images/hero.png']
+      },
+      'elevadores': {
+        title: 'Molduras e Portais de Elevador',
+        lead: 'Revestimento completo de batentes, testeiras e painéis em aço inox nobre para halls de edifícios residenciais de alto padrão e centros empresariais.',
+        mainImg: 'assets/images/commercial.png',
+        thumbnails: ['assets/images/welding-process.png', 'assets/images/residential.png', 'assets/images/welding-process.png']
+      }
+    };
+
+    function openCategoryModal(catId) {
+      const cat = categoriesData[catId];
+      if (!cat) return;
+      document.getElementById('modalTitle').textContent = cat.title;
+      document.getElementById('modalLead').textContent = cat.lead;
+      document.getElementById('modalMainImg').src = cat.mainImg;
+      
+      const grid = document.getElementById('modalSecondaryGrid');
+      grid.innerHTML = '';
+      cat.thumbnails.forEach((thumbSrc, idx) => {
+        const item = document.createElement('div');
+        item.className = 'h-24 sm:h-28 rounded-lg overflow-hidden border border-white/10 cursor-pointer hover:border-brand-orange transition-colors';
+        item.innerHTML = `<img src="${thumbSrc}" alt="Detalhe ${idx+1}" class="w-full h-full object-cover">`;
+        item.onclick = () => { document.getElementById('modalMainImg').src = thumbSrc; };
+        grid.appendChild(item);
+      });
+
+      document.getElementById('modalWhatsAppCTA').href = `https://wa.me/5541995650632?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20projetos%20de%20${encodeURIComponent(cat.title)}.`;
+      document.getElementById('categoryModal').classList.remove('hidden');
+    }
+
+    function closeCategoryModal() {
+      document.getElementById('categoryModal').classList.add('hidden');
+    }
+
+    function openLightbox(imgSrc, caption) {
+      document.getElementById('lightboxImg').src = imgSrc;
+      document.getElementById('lightboxCaption').textContent = caption;
+      document.getElementById('lightboxModal').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.add('hidden');
+    }
+
+    // Fechar modais ao teclar ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        setMobileMenu(false);
+        closeCategoryModal();
+        closeLightbox();
+      }
+    });
+  </script>
+
+
+
+
+</body></html>
